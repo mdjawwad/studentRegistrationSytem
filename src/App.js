@@ -1,13 +1,11 @@
 import React from "react";
 import Dashboard from "./componnets/dashboard";
- 
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <Dashboard />
     </div>
   );
 }
-
 export default App;
