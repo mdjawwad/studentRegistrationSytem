@@ -1,111 +1,174 @@
-body {
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
 .container {
-  display: flex;
-
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  max-width: 900px;
+  width: 90%;
   margin: 0 auto;
-  border: 1px solid #ccc;
-  padding: 20px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
 }
-.top {
-  flex: 1;
-  padding: 10px;
-  width: 80%;
-}
-.top button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
  
-  cursor: pointer;
+.top {
+  background-color: #f8f9fa;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-button:hover {
+
+.top h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#record-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+#record-form input,
+button {
+  padding: 10px;
+  width: 100%;
+  max-width: 300px;
+  margin: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.dropdown-btn{
+  padding: 10px;
+  width: 100%; 
+  margin: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#record-form input:focus,
+.dropdown-btn:focus,
+button:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+#record-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#record-form button:hover {
   background-color: #0056b3;
 }
-.bottom {
-  flex: 1;
+
+ 
+.dropdown {
+  position: relative;
+  justify-content: space-between;
+}
+
+.dropdown-btn {
+  background-color: #f8f9fa;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-width: 300px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  z-index: 1000;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
   padding: 10px;
-  border-top: 1px solid #ccc;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.3s ease;
 }
-h1 {
+
+.dropdown-item:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+ 
+.bottom {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.bottom h2 {
   text-align: center;
+  color: #333;
+  margin-bottom: 20px;
 }
+
 table {
   width: 100%;
   border-collapse: collapse;
-}
-form {
-  display: flex;
-  flex-direction: column;
+  margin-top: 10px;
 }
 
-th,
-td {
-  border: 1px solid #ccc;
-  padding: 8px;
-  text-align: left;
-}
-th {
-  background-color: #f2f2f2;
-}
- input
-  {
-  width: 100%;
+table th,
+table td {
+  border: 1px solid #ddd;
   padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
- 
- .dropdown{
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 100%;
- }
- 
- .dropdown-btn {
- 
-    padding: 10px;
-    
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 100%;
-  
-  }
-  
-  .dropdown-item:hover {
-    background-color: #0056b3;
-  }
-  
-button:hover {
-  background-color: #0056b3;
-}
-.deleteButton {
   text-align: center;
 }
-i {
-  margin: 5px 7px;
-  font-size: 20px;
+
+table th {
+  background-color: #007bff;
+  color: white;
+}
+
+table td button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
   cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
-#yesBtn:hover {
-  color: red;
+
+table td button:hover {
+  background-color: #0056b3;
 }
-#noBtn:hover {
-  color: green;
+
+table tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+table tr:hover {
+  background-color: #f1f1f1;
+}
+
+ 
+@media (max-width: 768px) {
+  #record-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #record-form input,
+  #record-form button,
+  .dropdown-btn {
+    width: 100%;
+    max-width: none;
+  }
+
+  table th,
+  table td {
+    font-size: 12px;
+    padding: 8px;
+  }
 }
